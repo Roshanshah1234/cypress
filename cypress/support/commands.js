@@ -1,8 +1,8 @@
 
 Cypress.Commands.add('login', () => {
-    cy.visit('http://localhost:3000/parts')
+    cy.visit('https://api.tekion.xyz/login')
     cy.get('#username')
-        .type('ssamal@tekion.com')
+        .type('mkosireddy@tekion.com')
     cy.get('#password').type('Tekion123')
     cy.contains('Login').click()
 

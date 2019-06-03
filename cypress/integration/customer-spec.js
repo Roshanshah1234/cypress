@@ -84,23 +84,6 @@ describe('visiting customer management', () => {
             cy.get('#relationship').type(data.relationship)
             cy.get('#refrence-modal').contains('Save').click()
 
-            //adding insurance Policy
-            // cy.get('#addInsurancePolicy').click({ force: true })
-            // cy.get('#policyNumber').type(data.policyNumber)
-            // cy.get('#policyCompany').type(data.phone)
-            // cy.wait(1000)
-            // cy.get('#policyEffectiveDate > div > .anticon > svg').click({ force: true })
-            //     .get('.ant-calendar-prev-year-btn').click()
-            //     .get('.ant-calendar-prev-year-btn').click()
-            //     .get('[title="May 17, 2017"] > .ant-calendar-date').click({ force: true })
-
-            // cy.get('#policyExpiryDate > div > .ant-calendar-picker-input').click({ force: true })
-            //     .get('.ant-calendar-prev-year-btn').click({ force: true })
-            //     .get('.ant-calendar-prev-year-btn').click({ force: true })
-            //     .get('[title="May 28, 2017"] > .ant-calendar-date').click({ force: true })
-
-            // cy.get('#insurance-modal > .buttonWrapper_primaryButton__3MMKW').click()
-
             cy.get('#loyaltyNumber').type(data.loyalityNumber, { force: true })
             cy.get('#arScheduleGroup').type(data.arScheduleGroup, { force: true })
             cy.get('#customerGroup').type(data.customerGroup, { force: true })
@@ -169,9 +152,6 @@ describe('visiting customer management', () => {
             cy.get('#city').should('have.value', data.city)
             cy.get('#addressForm #state').should('have.value', data.state)
             cy.get('#addressForm #country').should('have.value', data.country, { force: true })
-            //cy.get('#residentType > div > div > div.ant-select-selection-selected-value').should('have.value', 'Rent')
-            //cy.get('#monthlyRentOrMortgageAmount').should('have.value', data.monthlyRental)
-            // cy.get('#sameForBilling').should('be.checked')
             cy.get('#address-modal').contains('Save').click({ force: true })
         })
     })
